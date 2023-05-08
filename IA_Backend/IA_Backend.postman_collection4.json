@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "121d47d0-f7fe-4434-a06e-eb048c647512",
+		"name": "IA_Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"name\":\"Ahmed Alaaaaaaa \",\r\n    \"email\": \"ahmedalaa330@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"phone\":\"01122222222\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\":\"ahmedalaa30@gmail.com\",\r\n    \"password\":\"123456789\"\r\n   \r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Title",
+											"value": "In Search Of Lost Time",
+											"type": "default"
+										},
+										{
+											"key": "Author",
+											"value": "Hardcover\t",
+											"type": "default"
+										},
+										{
+											"key": "Category",
+											"value": "Drama",
+											"type": "default"
+										},
+										{
+											"key": "ISBN",
+											"value": "5645",
+											"type": "default"
+										},
+										{
+											"key": "RankNumber",
+											"value": "3118849",
+											"type": "default"
+										},
+										{
+											"key": "Photo_URL",
+											"type": "file",
+											"src": "/C:/Users/Ahmed/Desktop/Screenshot 2023-02-13 011631.png",
+											"disabled": true
+										},
+										{
+											"key": "Book_Price",
+											"value": "105",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Ahmed/Desktop/In Search Of Lost Time.jpeg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/book/create?token =d5d2f5a82eb3da00bf7ab90b8a94b728",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"create"
+									],
+									"query": [
+										{
+											"key": "token ",
+											"value": "d5d2f5a82eb3da00bf7ab90b8a94b728"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Title",
+											"value": "ahmmmmmmmmmmed",
+											"type": "default"
+										},
+										{
+											"key": "Author",
+											"value": "ahmeeeed",
+											"type": "default"
+										},
+										{
+											"key": "Category",
+											"value": "ssssssssssssss",
+											"type": "default"
+										},
+										{
+											"key": "ISBN",
+											"value": "66666",
+											"type": "default"
+										},
+										{
+											"key": "RankNumber",
+											"value": "55555",
+											"type": "default"
+										},
+										{
+											"key": "Book_Price",
+											"value": "2000",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Ahmed/Desktop/Screenshot 2023-02-05 150049.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:4000/book/update/37",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"update",
+										"37"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "d5d2f5a82eb3da00bf7ab90b8a94b728",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:4000/book/32",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"32"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "borrowedbooks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/borrowed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"borrowed"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view_new_user",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/view_new_user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"view_new_user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approve_user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/approve/27",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"approve",
+										"27"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rejected_user",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/rejected/29",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"rejected",
+										"29"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "accept_borrow",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "d742718c8e442d36a435097e9958d542",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/borrow/5/accept",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"borrow",
+										"5",
+										"accept"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "33",
+											"disabled": true
+										},
+										{
+											"key": "user_id",
+											"value": "50",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reject_borrow",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "d742718c8e442d36a435097e9958d542",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/borrow/3/reject",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"borrow",
+										"3",
+										"reject"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "33",
+											"disabled": true
+										},
+										{
+											"key": "user_id",
+											"value": "50",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "filter",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "4f13964e0bd13bbb3f452c1c994bcc49",
+										"type": "default"
+									},
+									{
+										"key": "status",
+										"value": "1",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "RankNumber",
+											"value": "66666",
+											"type": "default",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/book/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "author",
+											"value": "zzzzzzzzzzzz",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "ia",
+											"disabled": true
+										},
+										{
+											"key": "RankNumber",
+											"value": "66666",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "filter_ISBN",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "4f13964e0bd13bbb3f452c1c994bcc49",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status ",
+											"value": "0",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:4000/book/filter_ISBN",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"filter_ISBN"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/book/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "7cbe4c9f0470a23103e9a2b91f4bd7c3",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/book/search?search=Hardcover",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"search"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Hardcover"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "borrow",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "d742718c8e442d36a435097e9958d542",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/book/send_borrow/36/48",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"book",
+										"send_borrow",
+										"36",
+										"48"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "33",
+											"disabled": true
+										},
+										{
+											"key": "user_id",
+											"value": "50",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
